@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo Registrador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <img id="brand-logo" class="brand-logo hidden" alt="Logo colegio" />
+      <h1 id="brand-name">Módulo Registrador</h1>
+      <p id="brand-sede">Actas y certificados</p>
+    </header>
+
+    <main class="layout single">
+      <section class="card" id="registrador-login-wrap">
+        <h2>Ingreso registrador</h2>
+        <label>Clave registrador
+          <input id="registrador-key" type="password" placeholder="REGISTRADOR2026" />
+        </label>
+        <button id="registrador-enter-btn" type="button">Entrar</button>
+        <p id="registrador-message" class="message"></p>
+      </section>
+
+      <section class="card hidden" id="registrador-panel-wrap">
+        <h2>Generar acta y certificado</h2>
+        <div class="admin-tools inline">
+          <select id="reg-filter-sede"></select>
+          <button id="reg-pdf-btn" type="button">Generar acta PDF</button>
+        </div>
+        <div id="reg-stats" class="stats"></div>
+        <button id="cert-btn" type="button">Generar certificado de votación</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

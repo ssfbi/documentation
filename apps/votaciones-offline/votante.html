@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo Votante</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <img id="brand-logo" class="brand-logo hidden" alt="Logo colegio" />
+      <h1 id="brand-name">Módulo Votante</h1>
+      <p id="brand-sede">Registro de votos</p>
+    </header>
+
+    <main class="layout single">
+      <section class="card">
+        <h2>Perfil votante</h2>
+        <form id="vote-form">
+          <label>
+            Sede
+            <select id="sede" required></select>
+          </label>
+          <label>
+            Jornada
+            <select id="jornada" required></select>
+          </label>
+          <label>
+            Mesa (automática)
+            <input id="mesa" type="text" readonly />
+          </label>
+          <div id="dynamic-cargos"></div>
+          <button type="submit">Guardar voto</button>
+          <p id="vote-message" class="message"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
