@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo Votante</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <img id="brand-logo" class="brand-logo hidden" alt="Logo" />
+      <h1 id="brand-name">Votaciones Escolares Offline</h1>
+      <p id="brand-sede"></p>
+    </header>
+
+    <main class="layout single">
+      <section class="card">
+        <h2>Perfil votante</h2>
+        <form id="vote-form">
+          <label>
+            Sede
+            <select id="sede" required></select>
+          </label>
+          <label>
+            Mesa / Curso
+            <input id="mesa" type="text" maxlength="50" required />
+          </label>
+          <div id="dynamic-cargos"></div>
+          <button type="submit">Guardar voto</button>
+          <p id="vote-message" class="message"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
