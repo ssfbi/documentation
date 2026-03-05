@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo Administrador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <img id="brand-logo" class="brand-logo hidden" alt="Logo colegio" />
+      <h1 id="brand-name">Módulo Administrador</h1>
+      <p id="brand-sede">Configuración completa del sistema</p>
+    </header>
+
+    <main class="layout single">
+      <section class="card" id="admin-login-wrap">
+        <h2>Ingreso administrador</h2>
+        <label>Clave fija
+          <input id="master-key" type="password" placeholder="Ingrese clave" />
+        </label>
+        <button id="admin-enter-btn" type="button">Entrar</button>
+        <p id="admin-message" class="message"></p>
+      </section>
+
+      <section class="card hidden" id="admin-panel-wrap">
+        <h2>Marca del colegio</h2>
+        <div class="admin-tools">
+          <label>Nombre de la app / colegio<input id="cfg-app-name" type="text" maxlength="100" /></label>
+          <label>Ruta del logo (ej. assets/logo-colegio.png)<input id="cfg-logo" type="text" /></label>
+          <label>Color principal<input id="cfg-color" type="color" /></label>
+          <button type="button" id="save-brand-btn">Guardar marca</button>
+        </div>
+
+        <h3>Sedes y jornadas</h3>
+        <div class="admin-tools inline-3">
+          <input id="new-sede" type="text" placeholder="Nueva sede" />
+          <input id="new-jornada" type="text" placeholder="Jornada (A.M / P.M)" />
+          <button type="button" id="add-sede-btn">Crear sede y jornada</button>
+        </div>
+        <div id="sede-list"></div>
+
+        <h3>Mesas automáticas</h3>
+        <div class="admin-tools inline-3">
+          <select id="mesa-sede"></select>
+          <select id="mesa-jornada"></select>
+          <input id="mesa-start" type="number" min="1" value="1" />
+          <button type="button" id="set-mesa-btn">Configurar número inicial mesa</button>
+        </div>
+
+        <h3>Cargos y candidatos</h3>
+        <div class="admin-tools inline">
+          <input id="new-cargo" type="text" placeholder="Nuevo cargo" />
+          <button type="button" id="add-cargo-btn">Añadir cargo</button>
+        </div>
+        <div id="cargo-admin-list"></div>
+
+        <h3>Zona de eliminación protegida</h3>
+        <div class="admin-tools inline-3">
+          <input id="danger-key" type="password" placeholder="Clave ELIMINARDATOS2026" />
+          <button id="wipe-votes-btn" type="button" class="danger">Eliminar todos los votos</button>
+          <button id="wipe-candidates-btn" type="button" class="danger">Eliminar todos los candidatos</button>
+        </div>
+        <p id="danger-message" class="message"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+<rect width='200' height='200' fill='white' stroke='#111827' stroke-width='8'/>
+<path d='M40 40 L160 160 M160 40 L40 160' stroke='#9ca3af' stroke-width='10'/>
+<text x='100' y='190' font-size='18' text-anchor='middle' fill='#111827' font-family='Arial'>En blanco</text>
+</svg>

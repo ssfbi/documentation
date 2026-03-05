@@ -1,0 +1,26 @@
+:root { --brand: #0d3b66; font-family: Inter, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f7ff; color: #1f2a44; }
+.app-header { text-align: center; padding: 1rem; background: var(--brand); color: #fff; }
+.layout { max-width: 1100px; margin: 1rem auto; padding: 0 1rem; display: grid; gap: 1rem; }
+.layout.single { grid-template-columns: 1fr; max-width: 960px; }
+.card { background: #fff; border-radius: 12px; padding: 1rem; box-shadow: 0 10px 24px rgba(13,59,102,.1); }
+.card.mini { padding: .75rem; margin-bottom: .75rem; }
+.brand-logo { width: 76px; height: 76px; object-fit: contain; background: #fff; border-radius: 10px; padding: 3px; }
+label, fieldset, .admin-tools { display: grid; gap: .4rem; margin-bottom: .7rem; }
+.admin-tools.inline { grid-template-columns: 1fr auto; align-items: end; }
+.admin-tools.inline-3 { grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); align-items: end; }
+input, select, button { font: inherit; padding: .58rem .7rem; border-radius: 8px; border: 1px solid #bcc8e6; }
+button, .btn { background: #0d6efd; color: #fff; border: 0; border-radius: 8px; padding: .62rem .9rem; cursor: pointer; text-decoration: none; }
+button.danger { background: #c62828; }
+.candidate-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); gap: .6rem; }
+.candidate-card { border: 1px solid #bfd0f2; border-radius: 10px; padding: .4rem; display: grid; gap: .4rem; }
+.candidate-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; background: #edf2ff; }
+.message { min-height: 1.2rem; }
+.hidden { display: none; }
+.home { max-width: 760px; margin: 2rem auto; text-align: center; background: #fff; border-radius: 12px; padding: 1.5rem; }
+.home-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.stats { margin-top: .8rem; display: grid; gap: .75rem; }
+.stat-card { border: 1px solid #d3def2; border-radius: 8px; padding: .7rem; }
+.winner-card { border: 3px solid #0d3b66; border-radius: 10px; padding: .9rem; background: #eff5ff; }
+.danger-text { color: #b71c1c; font-weight: 700; }
